@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    @apply antialiased;
+  }
+
+  body {
+    @apply m-0 p-0;
+  }
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+/* PDF Viewer Styles */
+.react-pdf__Document {
+  @apply flex flex-col items-center;
+}
+
+.react-pdf__Page {
+  @apply max-w-full;
+}
+
+.react-pdf__Page__canvas {
+  @apply max-w-full h-auto !important;
+  @apply shadow-lg rounded-lg;
+}
+
+/* PDF Text Layer */
+.react-pdf__Page__textContent {
+  @apply select-text;
+}
+
+.react-pdf__Page__textContent span {
+  @apply opacity-20;
+}
